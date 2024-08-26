@@ -29,10 +29,10 @@
 
                 <nav class="nav-menu d-none d-lg-block">
                     <ul>
-                    <li class="active"><a href="#header"> <span>Home</span></a></li>
-                    <li><a href="education-experience.html"> <span>Education & Experience</span></a></li>
-                    <li><a href="project-skills.html"> <span>Projects & Skills</span></a></li>
-                    <li><a href="about.html"><span>About</span></a></li>
+                        <li class="{{ request()->is('/') ? 'active' : '' }}"><a href="{{ route('homepage') }}"> <span>Home</span></a></li>
+                        <li class="{{ request()->is('education-experience') ? 'active' : '' }}"><a href="{{ route('education-experience') }}"> <span>Education & Experience</span></a></li>
+                        <li class="{{ request()->is('project-skills') ? 'active' : '' }}"><a href="{{ route('project-skills') }}"> <span>Projects & Skills</span></a></li>
+                        <li class="{{ request()->is('about') ? 'active' : '' }}"><a href="{{ route('about') }}"><span>About</span></a></li>
                     </ul>
                 </nav>
 
